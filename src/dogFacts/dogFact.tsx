@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Box } from "@material-ui/core";
+import { Box } from "@material-ui/core";
+import FactCard from "./factCard";
 
 type Props = {
   dogFact: {
@@ -11,8 +12,8 @@ const DogFact = ({ dogFact }: Props) => {
   const { fact } = dogFact;
 
   return (
-    <Box m={1} display="flex" flexDirection="row" justifyContent="center">
-      <Typography>{fact}</Typography>
+    <Box display="flex" flexDirection="row" justifyContent="center" m={3}>
+      <FactCard fact={fact} />
     </Box>
   );
 };
